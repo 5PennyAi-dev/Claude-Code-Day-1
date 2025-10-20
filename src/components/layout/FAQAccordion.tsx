@@ -20,11 +20,11 @@ export function FAQAccordion({ title, items }: FAQAccordionProps) {
   };
 
   return (
-    <section className="py-1 bg-porcelain">
+    <section className="py-1 bg-[#F4F6F8]">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
           {title && (
-            <h2 className="text-4xl md:text-5xl font-semibold text-ink text-center mb-3">
+            <h2 className="text-4xl md:text-5xl font-semibold text-[#1C232B] text-center mb-3">
               {title}
             </h2>
           )}
@@ -33,18 +33,18 @@ export function FAQAccordion({ title, items }: FAQAccordionProps) {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="bg-bone rounded-xl overflow-hidden shadow-sm"
+                className="bg-[#EDE9E4] rounded-xl overflow-hidden shadow-sm"
               >
                 <button
                   type="button"
                   onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-20 flex justify-between items-center text-left hover:bg-bone/80 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric-violet focus-visible:ring-inset"
+                  className="w-full px-6 py-20 flex justify-between items-center text-left hover:bg-[#EDE9E4]/80 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A5BFF] focus-visible:ring-inset"
                 >
-                  <span className="text-lg font-semibold text-ink pr-16">
+                  <span className="text-lg font-semibold text-[#1C232B] pr-16">
                     {item.question}
                   </span>
                   <svg
-                    className={`w-5 h-5 text-electric-violet flex-shrink-0 transition-transform duration-200 ${
+                    className={`w-5 h-5 text-[#6A5BFF] flex-shrink-0 transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -72,7 +72,7 @@ export function FAQAccordion({ title, items }: FAQAccordionProps) {
                       <span></span>
                       <span></span>
                     </div>
-                    <p className="text-base text-steel leading-relaxed">
+                    <p className="text-base text-[#6C7A89] leading-relaxed">
                       {item.answer}
                     </p>
                   </div>

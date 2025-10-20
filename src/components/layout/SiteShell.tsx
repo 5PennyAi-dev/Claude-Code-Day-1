@@ -23,12 +23,12 @@ export function SiteShell({ children }: SiteShellProps) {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-porcelain/95 backdrop-blur-sm border-b border-ink/10">
+      <header className="sticky top-0 z-50 bg-[#F4F6F8]/95 backdrop-blur-sm border-b border-ink/10">
         <nav className="container mx-auto px-6 py-1 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="text-2xl font-semibold text-ink">
-              5Penny<span className="text-electric-violet">.</span>
+            <div className="text-2xl font-semibold text-[#1C232B]">
+              5Penny<span className="text-[#6A5BFF]">.</span>
             </div>
           </Link>
 
@@ -38,7 +38,7 @@ export function SiteShell({ children }: SiteShellProps) {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm text-ink hover:text-electric-violet transition-colors duration-200"
+                className="text-sm text-[#1C232B] hover:text-[#6A5BFF] transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -49,7 +49,7 @@ export function SiteShell({ children }: SiteShellProps) {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden p-8 text-ink"
+            className="md:hidden p-8 text-[#1C232B]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -80,13 +80,13 @@ export function SiteShell({ children }: SiteShellProps) {
 
         {/* Mobile Menu Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-bone border-t border-ink/10">
+          <div className="md:hidden bg-[#EDE9E4] border-t border-ink/10">
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-base text-ink hover:text-electric-violet transition-colors duration-200 py-2"
+                  className="text-base text-[#1C232B] hover:text-[#6A5BFF] transition-colors duration-200 py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -110,9 +110,9 @@ export function SiteShell({ children }: SiteShellProps) {
             {/* Brand Column */}
             <div className="md:col-span-2">
               <div className="text-2xl font-semibold mb-1">
-                5Penny<span className="text-electric-violet">.</span>
+                5Penny<span className="text-[#6A5BFF]">.</span>
               </div>
-              <p className="text-sm text-steel max-w-md mb-6">
+              <p className="text-sm text-[#6C7A89] max-w-md mb-6">
                 Practical AI systems that pay for themselves. Fixed-scope, fixed-price,
                 90-day payoff or we keep working.
               </p>
@@ -120,7 +120,7 @@ export function SiteShell({ children }: SiteShellProps) {
                 <input
                   type="email"
                   placeholder="your@email.com"
-                  className="px-1 py-3 bg-near-black-variant border border-steel/30 rounded-lg text-sm text-porcelain placeholder:text-steel focus:outline-none focus:border-electric-violet focus:ring-2 focus:ring-electric-violet/20"
+                  className="px-1 py-3 bg-near-black-variant border border-steel/30 rounded-lg text-sm text-porcelain placeholder:text-[#6C7A89] focus:outline-none focus:border-[#6A5BFF] focus:ring-2 focus:ring-[#6A5BFF]/20"
                 />
                 <Button size="sm" className="self-start">
                   Get Updates
@@ -136,7 +136,7 @@ export function SiteShell({ children }: SiteShellProps) {
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="text-sm text-steel hover:text-electric-violet transition-colors duration-200"
+                      className="text-sm text-[#6C7A89] hover:text-[#6A5BFF] transition-colors duration-200"
                     >
                       {item.name}
                     </Link>
@@ -148,11 +148,11 @@ export function SiteShell({ children }: SiteShellProps) {
             {/* Contact */}
             <div>
               <h3 className="text-sm font-semibold mb-1 text-porcelain">Contact</h3>
-              <ul className="space-y-3 text-sm text-steel">
+              <ul className="space-y-3 text-sm text-[#6C7A89]">
                 <li>
                   <Link
                     href="/contact"
-                    className="hover:text-electric-violet transition-colors duration-200"
+                    className="hover:text-[#6A5BFF] transition-colors duration-200"
                   >
                     Get in Touch
                   </Link>
@@ -160,7 +160,7 @@ export function SiteShell({ children }: SiteShellProps) {
                 <li>
                   <a
                     href="mailto:hello@5penny.ai"
-                    className="hover:text-electric-violet transition-colors duration-200"
+                    className="hover:text-[#6A5BFF] transition-colors duration-200"
                   >
                     hello@5penny.ai
                   </a>
@@ -170,18 +170,18 @@ export function SiteShell({ children }: SiteShellProps) {
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-12 pt-6 border-t border-steel/20 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-steel">
+          <div className="mt-12 pt-6 border-t border-steel/20 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#6C7A89]">
             <p>&copy; {new Date().getFullYear()} 5Penny AI. All rights reserved.</p>
             <div className="flex gap-6">
               <Link
                 href="/privacy"
-                className="hover:text-electric-violet transition-colors duration-200"
+                className="hover:text-[#6A5BFF] transition-colors duration-200"
               >
                 Privacy
               </Link>
               <Link
                 href="/terms"
-                className="hover:text-electric-violet transition-colors duration-200"
+                className="hover:text-[#6A5BFF] transition-colors duration-200"
               >
                 Terms
               </Link>

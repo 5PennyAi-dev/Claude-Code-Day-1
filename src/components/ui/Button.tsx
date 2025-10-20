@@ -14,20 +14,20 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       inline-flex items-center justify-center
       font-medium rounded-xl
       transition-all duration-200 ease-in-out
-      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric-violet focus-visible:ring-offset-4
+      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A5BFF] focus-visible:ring-offset-4
       disabled:opacity-50 disabled:cursor-not-allowed
     `;
 
     const variantStyles = {
       primary: `
-        bg-electric-violet text-white
+        bg-[#6A5BFF] text-white
         hover:opacity-90 hover:shadow-md hover:-translate-y-px
         active:translate-y-0
       `,
       secondary: `
-        bg-bone text-ink border border-ink/20
-        hover:bg-bone/80 hover:border-ink/30
-        active:bg-bone/60
+        bg-[#EDE9E4] text-[#1C232B] border border-ink/20
+        hover:bg-[#EDE9E4]/80 hover:border-ink/30
+        active:bg-[#EDE9E4]/60
       `,
     };
 
