@@ -67,19 +67,19 @@ export default function HomePage() {
       <ValueProps title="Measurable outcomes in 90 days" values={valuePropositions} />
 
       {/* Featured Packages */}
-      <section className="py-64 bg-bone">
-        <div className="container mx-auto px-24">
-          <div className="text-center mb-48">
-            <h2 className="text-36 md:text-48 font-semibold text-ink mb-16">
+      <section className="py-1 bg-bone">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-3">
+            <h2 className="text-4xl md:text-5xl font-semibold text-ink mb-1">
               Fixed-scope packages
             </h2>
-            <p className="text-18 text-steel max-w-2xl mx-auto">
+            <p className="text-lg text-steel max-w-2xl mx-auto">
               Choose the package that fits your needs. All include clear acceptance metrics
               and 90-day ROI guarantee.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-32 mb-48">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-3">
             {packages.map((pkg) => (
               <PackageCard key={pkg.slug} package={pkg} />
             ))}
@@ -94,25 +94,25 @@ export default function HomePage() {
       </section>
 
       {/* Library CTA Section */}
-      <section className="py-64 bg-porcelain">
-        <div className="container mx-auto px-24">
-          <div className="max-w-3xl mx-auto bg-bone rounded-16 p-48 shadow-md text-center">
-            <h2 className="text-36 font-semibold text-ink mb-16">
+      <section className="py-1 bg-porcelain">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto bg-bone rounded-2xl p-48 shadow-md text-center">
+            <h2 className="text-4xl font-semibold text-ink mb-1">
               Get the prompt library
             </h2>
-            <p className="text-18 text-steel mb-32">
+            <p className="text-lg text-steel mb-2">
               Download our collection of battle-tested prompts and templates. See exactly
               how we structure AI workflows for real business problems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-16 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="px-16 py-12 bg-white border border-ink/20 rounded-10 text-16 placeholder:text-steel focus:outline-none focus:border-electric-violet focus:ring-2 focus:ring-electric-violet/20 w-full sm:w-80"
+                className="px-1 py-3 bg-white border border-ink/20 rounded-lg text-base placeholder:text-steel focus:outline-none focus:border-electric-violet focus:ring-2 focus:ring-electric-violet/20 w-full sm:w-80"
               />
               <Button size="lg">Download Free</Button>
             </div>
-            <p className="text-12 text-steel mt-16">
+            <p className="text-xs text-steel mt-1">
               No spam. Unsubscribe anytime. 5 prompts + usage guide.
             </p>
           </div>
@@ -120,44 +120,44 @@ export default function HomePage() {
       </section>
 
       {/* Case Study Teaser */}
-      <section className="py-64 bg-bone">
-        <div className="container mx-auto px-24">
-          <div className="text-center mb-48">
-            <h2 className="text-36 md:text-48 font-semibold text-ink mb-16">
+      <section className="py-1 bg-bone">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-3">
+            <h2 className="text-4xl md:text-5xl font-semibold text-ink mb-1">
               Real results from real teams
             </h2>
-            <p className="text-18 text-steel max-w-2xl mx-auto">
+            <p className="text-lg text-steel max-w-2xl mx-auto">
               See how we helped SMBs save time, reduce errors, and capture revenue with
               practical AI systems.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-32 mb-48">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
             {/* Case Study Card 1 */}
-            <div className="bg-porcelain rounded-12 p-32 shadow-sm hover:shadow-md transition-shadow duration-normal">
-              <div className="flex items-center gap-12 mb-16">
-                <span className="px-12 py-4 bg-electric-violet/10 text-electric-violet text-12 font-semibold rounded-8 border border-electric-violet/20">
+            <div className="bg-porcelain rounded-xl p-32 shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div className="flex items-center gap-3 mb-1">
+                <span className="px-3 py-1 bg-electric-violet/10 text-electric-violet text-xs font-semibold rounded-lg border border-electric-violet/20">
                   Manufacturing
                 </span>
-                <span className="text-12 text-steel">90-sec read</span>
+                <span className="text-xs text-steel">90-sec read</span>
               </div>
-              <h3 className="text-22 font-semibold text-ink mb-16">
+              <h3 className="text-2xl font-semibold text-ink mb-1">
                 Compliance Checklist Automation
               </h3>
-              <div className="flex items-baseline gap-16 mb-24">
+              <div className="flex items-baseline gap-4 mb-6">
                 <div className="text-center">
-                  <div className="text-28 font-semibold text-steel">6hrs</div>
-                  <div className="text-12 text-steel">Before</div>
+                  <div className="text-3xl font-semibold text-steel">6hrs</div>
+                  <div className="text-xs text-steel">Before</div>
                 </div>
-                <svg className="w-32 h-16 text-electric-violet" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-32 h-4 text-electric-violet" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
                 <div className="text-center">
-                  <div className="text-28 font-semibold text-jade">45min</div>
-                  <div className="text-12 text-steel">After</div>
+                  <div className="text-3xl font-semibold text-jade">45min</div>
+                  <div className="text-xs text-steel">After</div>
                 </div>
               </div>
-              <p className="text-14 text-steel mb-24 leading-relaxed">
+              <p className="text-sm text-steel mb-6 leading-relaxed">
                 45-person manufacturer cut weekly compliance checklist time by 87%. Same-day turnaround, zero issues in 90 days.
               </p>
               <Button variant="secondary" size="sm">
@@ -166,30 +166,30 @@ export default function HomePage() {
             </div>
 
             {/* Case Study Card 2 */}
-            <div className="bg-porcelain rounded-12 p-32 shadow-sm hover:shadow-md transition-shadow duration-normal">
-              <div className="flex items-center gap-12 mb-16">
-                <span className="px-12 py-4 bg-electric-violet/10 text-electric-violet text-12 font-semibold rounded-8 border border-electric-violet/20">
+            <div className="bg-porcelain rounded-xl p-32 shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div className="flex items-center gap-3 mb-1">
+                <span className="px-3 py-1 bg-electric-violet/10 text-electric-violet text-xs font-semibold rounded-lg border border-electric-violet/20">
                   Marketing Agency
                 </span>
-                <span className="text-12 text-steel">90-sec read</span>
+                <span className="text-xs text-steel">90-sec read</span>
               </div>
-              <h3 className="text-22 font-semibold text-ink mb-16">
+              <h3 className="text-2xl font-semibold text-ink mb-1">
                 Client Onboarding Assistant
               </h3>
-              <div className="flex items-baseline gap-16 mb-24">
+              <div className="flex items-baseline gap-4 mb-6">
                 <div className="text-center">
-                  <div className="text-28 font-semibold text-steel">4.5hrs</div>
-                  <div className="text-12 text-steel">Before</div>
+                  <div className="text-3xl font-semibold text-steel">4.5hrs</div>
+                  <div className="text-xs text-steel">Before</div>
                 </div>
-                <svg className="w-32 h-16 text-electric-violet" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-32 h-4 text-electric-violet" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
                 <div className="text-center">
-                  <div className="text-28 font-semibold text-jade">1hr</div>
-                  <div className="text-12 text-steel">After</div>
+                  <div className="text-3xl font-semibold text-jade">1hr</div>
+                  <div className="text-xs text-steel">After</div>
                 </div>
               </div>
-              <p className="text-14 text-steel mb-24 leading-relaxed">
+              <p className="text-sm text-steel mb-6 leading-relaxed">
                 15-person agency increased onboarding capacity 3x without adding headcount. Client satisfaction up 18%.
               </p>
               <Button variant="secondary" size="sm">

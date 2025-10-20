@@ -27,34 +27,34 @@ export function HeroSplit({
   proofBadges,
 }: HeroSplitProps) {
   return (
-    <section className="bg-porcelain py-64 md:py-96">
-      <div className="container mx-auto px-24">
+    <section className="bg-porcelain py-1 md:py-6">
+      <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Eyebrow */}
           {eyebrow && (
-            <div className="inline-block mb-16">
-              <span className="text-12 uppercase tracking-wide font-semibold text-steel">
+            <div className="inline-block mb-1">
+              <span className="text-xs uppercase tracking-wide font-semibold text-steel">
                 {eyebrow}
               </span>
             </div>
           )}
 
           {/* Headline */}
-          <h1 className="text-48 md:text-64 font-semibold text-ink mb-24 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-semibold text-ink mb-6 leading-tight">
             {headline}
           </h1>
 
           {/* Lead */}
-          <p className="text-18 md:text-22 text-steel mb-32 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-2xl text-steel mb-2 max-w-3xl mx-auto leading-relaxed">
             {lead}
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-16 justify-center items-center mb-48">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-3">
             {ctaPrimary && (
               <Link
                 href={ctaPrimary.href}
-                className="inline-flex items-center justify-center font-medium rounded-12 transition-all duration-normal ease-brand focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-electric-violet focus-visible:ring-offset-focus bg-electric-violet text-white hover:opacity-90 hover:shadow-md hover:-translate-y-px active:translate-y-0 px-32 py-16 text-18"
+                className="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric-violet focus-visible:ring-offset-4 bg-electric-violet text-white hover:opacity-90 hover:shadow-md hover:-translate-y-px active:translate-y-0 px-2 py-1 text-lg"
               >
                 {ctaPrimary.label}
               </Link>
@@ -62,7 +62,7 @@ export function HeroSplit({
             {ctaSecondary && (
               <Link
                 href={ctaSecondary.href}
-                className="inline-flex items-center justify-center font-medium rounded-12 transition-all duration-normal ease-brand focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-electric-violet focus-visible:ring-offset-focus bg-bone text-ink border border-ink/20 hover:bg-bone/80 hover:border-ink/30 active:bg-bone/60 px-32 py-16 text-18"
+                className="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric-violet focus-visible:ring-offset-4 bg-bone text-ink border border-ink/20 hover:bg-bone/80 hover:border-ink/30 active:bg-bone/60 px-2 py-1 text-lg"
               >
                 {ctaSecondary.label}
               </Link>
@@ -71,13 +71,13 @@ export function HeroSplit({
 
           {/* Proof Badges */}
           {proofBadges && proofBadges.length > 0 && (
-            <div className="flex flex-wrap justify-center gap-24 items-center">
-              <span className="text-12 text-steel uppercase tracking-wide">Trusted by teams at</span>
-              <div className="flex flex-wrap gap-32 justify-center">
+            <div className="flex flex-wrap justify-center gap-6 items-center">
+              <span className="text-xs text-steel uppercase tracking-wide">Trusted by teams at</span>
+              <div className="flex flex-wrap gap-2 justify-center">
                 {proofBadges.map((badge, index) => (
                   <div
                     key={index}
-                    className="px-16 py-8 bg-bone rounded-8 text-14 font-medium text-ink"
+                    className="px-1 py-2 bg-bone rounded-lg text-sm font-medium text-ink"
                   >
                     {badge}
                   </div>

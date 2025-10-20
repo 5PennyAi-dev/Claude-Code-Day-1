@@ -24,21 +24,21 @@ export function SiteShell({ children }: SiteShellProps) {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-porcelain/95 backdrop-blur-sm border-b border-ink/10">
-        <nav className="container mx-auto px-24 py-16 flex items-center justify-between">
+        <nav className="container mx-auto px-6 py-1 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-8">
-            <div className="text-22 font-semibold text-ink">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="text-2xl font-semibold text-ink">
               5Penny<span className="text-electric-violet">.</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-32">
+          <div className="hidden md:flex items-center gap-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-14 text-ink hover:text-electric-violet transition-colors duration-normal"
+                className="text-sm text-ink hover:text-electric-violet transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -54,7 +54,7 @@ export function SiteShell({ children }: SiteShellProps) {
             aria-label="Toggle menu"
           >
             <svg
-              className="w-24 h-24"
+              className="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -81,18 +81,18 @@ export function SiteShell({ children }: SiteShellProps) {
         {/* Mobile Menu Drawer */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-bone border-t border-ink/10">
-            <div className="container mx-auto px-24 py-24 flex flex-col gap-16">
+            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-16 text-ink hover:text-electric-violet transition-colors duration-normal py-8"
+                  className="text-base text-ink hover:text-electric-violet transition-colors duration-200 py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-16 border-t border-ink/10">
+              <div className="pt-4 border-t border-ink/10">
                 <Button className="w-full">Book a Call</Button>
               </div>
             </div>
@@ -105,22 +105,22 @@ export function SiteShell({ children }: SiteShellProps) {
 
       {/* Footer */}
       <footer className="bg-near-black text-porcelain">
-        <div className="container mx-auto px-24 py-64">
+        <div className="container mx-auto px-6 py-1">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-48">
             {/* Brand Column */}
             <div className="md:col-span-2">
-              <div className="text-22 font-semibold mb-16">
+              <div className="text-2xl font-semibold mb-1">
                 5Penny<span className="text-electric-violet">.</span>
               </div>
-              <p className="text-14 text-steel max-w-md mb-24">
+              <p className="text-sm text-steel max-w-md mb-6">
                 Practical AI systems that pay for themselves. Fixed-scope, fixed-price,
                 90-day payoff or we keep working.
               </p>
-              <div className="flex flex-col gap-12">
+              <div className="flex flex-col gap-3">
                 <input
                   type="email"
                   placeholder="your@email.com"
-                  className="px-16 py-12 bg-near-black-variant border border-steel/30 rounded-8 text-14 text-porcelain placeholder:text-steel focus:outline-none focus:border-electric-violet focus:ring-2 focus:ring-electric-violet/20"
+                  className="px-1 py-3 bg-near-black-variant border border-steel/30 rounded-lg text-sm text-porcelain placeholder:text-steel focus:outline-none focus:border-electric-violet focus:ring-2 focus:ring-electric-violet/20"
                 />
                 <Button size="sm" className="self-start">
                   Get Updates
@@ -130,13 +130,13 @@ export function SiteShell({ children }: SiteShellProps) {
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-14 font-semibold mb-16 text-porcelain">Quick Links</h3>
-              <ul className="space-y-12">
+              <h3 className="text-sm font-semibold mb-1 text-porcelain">Quick Links</h3>
+              <ul className="space-y-3">
                 {navigation.map((item) => (
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="text-14 text-steel hover:text-electric-violet transition-colors duration-normal"
+                      className="text-sm text-steel hover:text-electric-violet transition-colors duration-200"
                     >
                       {item.name}
                     </Link>
@@ -147,12 +147,12 @@ export function SiteShell({ children }: SiteShellProps) {
 
             {/* Contact */}
             <div>
-              <h3 className="text-14 font-semibold mb-16 text-porcelain">Contact</h3>
-              <ul className="space-y-12 text-14 text-steel">
+              <h3 className="text-sm font-semibold mb-1 text-porcelain">Contact</h3>
+              <ul className="space-y-3 text-sm text-steel">
                 <li>
                   <Link
                     href="/contact"
-                    className="hover:text-electric-violet transition-colors duration-normal"
+                    className="hover:text-electric-violet transition-colors duration-200"
                   >
                     Get in Touch
                   </Link>
@@ -160,7 +160,7 @@ export function SiteShell({ children }: SiteShellProps) {
                 <li>
                   <a
                     href="mailto:hello@5penny.ai"
-                    className="hover:text-electric-violet transition-colors duration-normal"
+                    className="hover:text-electric-violet transition-colors duration-200"
                   >
                     hello@5penny.ai
                   </a>
@@ -170,18 +170,18 @@ export function SiteShell({ children }: SiteShellProps) {
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-48 pt-24 border-t border-steel/20 flex flex-col md:flex-row justify-between items-center gap-16 text-12 text-steel">
+          <div className="mt-12 pt-6 border-t border-steel/20 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-steel">
             <p>&copy; {new Date().getFullYear()} 5Penny AI. All rights reserved.</p>
-            <div className="flex gap-24">
+            <div className="flex gap-6">
               <Link
                 href="/privacy"
-                className="hover:text-electric-violet transition-colors duration-normal"
+                className="hover:text-electric-violet transition-colors duration-200"
               >
                 Privacy
               </Link>
               <Link
                 href="/terms"
-                className="hover:text-electric-violet transition-colors duration-normal"
+                className="hover:text-electric-violet transition-colors duration-200"
               >
                 Terms
               </Link>

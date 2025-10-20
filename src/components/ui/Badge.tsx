@@ -7,7 +7,7 @@ export interface BadgeProps {
 }
 
 export function Badge({ children, variant = 'default', size = 'md' }: BadgeProps) {
-  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-8 whitespace-nowrap';
+  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg whitespace-nowrap';
 
   const variantStyles = {
     default: 'bg-bone text-ink border border-ink/20',
@@ -18,8 +18,8 @@ export function Badge({ children, variant = 'default', size = 'md' }: BadgeProps
   };
 
   const sizeStyles = {
-    sm: 'px-8 py-4 text-12',
-    md: 'px-12 py-6 text-14',
+    sm: 'px-2 py-1 text-xs',
+    md: 'px-3 py-6 text-sm',
   };
 
   const combinedClassName = `

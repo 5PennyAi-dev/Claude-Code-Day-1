@@ -20,31 +20,31 @@ export function FAQAccordion({ title, items }: FAQAccordionProps) {
   };
 
   return (
-    <section className="py-64 bg-porcelain">
-      <div className="container mx-auto px-24">
+    <section className="py-1 bg-porcelain">
+      <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
           {title && (
-            <h2 className="text-36 md:text-48 font-semibold text-ink text-center mb-48">
+            <h2 className="text-4xl md:text-5xl font-semibold text-ink text-center mb-3">
               {title}
             </h2>
           )}
 
-          <div className="space-y-16">
+          <div className="space-y-4">
             {items.map((item, index) => (
               <div
                 key={index}
-                className="bg-bone rounded-12 overflow-hidden shadow-sm"
+                className="bg-bone rounded-xl overflow-hidden shadow-sm"
               >
                 <button
                   type="button"
                   onClick={() => toggleItem(index)}
-                  className="w-full px-24 py-20 flex justify-between items-center text-left hover:bg-bone/80 transition-colors duration-normal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric-violet focus-visible:ring-inset"
+                  className="w-full px-6 py-20 flex justify-between items-center text-left hover:bg-bone/80 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric-violet focus-visible:ring-inset"
                 >
-                  <span className="text-18 font-semibold text-ink pr-16">
+                  <span className="text-lg font-semibold text-ink pr-16">
                     {item.question}
                   </span>
                   <svg
-                    className={`w-20 h-20 text-electric-violet flex-shrink-0 transition-transform duration-normal ${
+                    className={`w-5 h-5 text-electric-violet flex-shrink-0 transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -62,17 +62,17 @@ export function FAQAccordion({ title, items }: FAQAccordionProps) {
 
                 {/* Answer */}
                 <div
-                  className={`overflow-hidden transition-all duration-normal ease-brand ${
+                  className={`overflow-hidden transition-all duration-200 ease-in-out ${
                     openIndex === index ? 'max-h-96' : 'max-h-0'
                   }`}
                 >
-                  <div className="px-24 pb-24 pt-8">
+                  <div className="px-6 pb-6 pt-8">
                     {/* Ledger Divider */}
-                    <div className="ledger-divider mb-16">
+                    <div className="ledger-divider mb-1">
                       <span></span>
                       <span></span>
                     </div>
-                    <p className="text-16 text-steel leading-relaxed">
+                    <p className="text-base text-steel leading-relaxed">
                       {item.answer}
                     </p>
                   </div>
