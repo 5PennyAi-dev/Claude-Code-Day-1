@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
+  /* Colors - using * to make them available as utilities */
+  --color-*: initial;
   --color-near-black: #0B0D10;
   --color-near-black-variant: #0F1216;
   --color-ink: #1C232B;
