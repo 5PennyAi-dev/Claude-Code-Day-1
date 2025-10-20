@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest:*)",
+      "Read(//c/Users/chris/5PennyAI/ClaudeCodeProjects/**)",
+      "Bash(mv:*)",
+      "Bash(rmdir:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nPhase 1: Foundation and design system\n\nInitialized Next.js 15 project with TypeScript, Tailwind CSS, and ESLint. Implemented complete design system including:\n\n- CSS variables for color palette (near-black, ink, porcelain, bone, electric-violet, jade, persimmon, steel)\n- Typography scale (12-64px) with Inter font family\n- Spacing tokens (4-point grid: 4/8/12/16/24/32/48/64)\n- Border radius tokens (8/10/12/16)\n- Motion tokens (140-220ms with custom easing)\n- Focus ring styles (2px electric-violet with 4px offset)\n\nCreated base components and seed data:\n- Button component with primary/secondary variants\n- Package offerings data (3 fixed-scope packages)\n- Case studies data (2 real-world examples)\n\nUpdated layout with Inter font and brand metadata.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

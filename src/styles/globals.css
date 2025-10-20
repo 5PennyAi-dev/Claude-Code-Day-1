@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+:root {
+  /* Color Palette */
+  --near-black: #0B0D10;
+  --near-black-variant: #0F1216;
+  --ink: #1C232B;
+  --porcelain: #F4F6F8;
+  --bone: #EDE9E4;
+  --electric-violet: #6A5BFF;
+  --jade: #00A77C;
+  --persimmon: #FF5A3C;
+  --steel: #6C7A89;
+
+  /* Typography Scale */
+  --font-size-12: 0.75rem;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-22: 1.375rem;
+  --font-size-28: 1.75rem;
+  --font-size-36: 2.25rem;
+  --font-size-48: 3rem;
+  --font-size-64: 4rem;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+
+  /* Spacing (4-point grid) */
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-12: 0.75rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-48: 3rem;
+  --spacing-64: 4rem;
+
+  /* Border Radius */
+  --radius-8: 0.5rem;
+  --radius-10: 0.625rem;
+  --radius-12: 0.75rem;
+  --radius-16: 1rem;
+
+  /* Motion */
+  --duration-fast: 140ms;
+  --duration-normal: 180ms;
+  --duration-slow: 220ms;
+  --easing: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Focus Ring */
+  --focus-ring-width: 2px;
+  --focus-ring-color: var(--electric-violet);
+  --focus-ring-offset: 4px;
+
+  /* Semantic Tokens */
+  --bg-dark: var(--near-black);
+  --bg-light: var(--porcelain);
+  --bg-surface: var(--bone);
+  --text-primary: var(--ink);
+  --text-secondary: var(--steel);
+  --accent: var(--electric-violet);
+  --success: var(--jade);
+  --alert: var(--persimmon);
+}
+
+@theme inline {
+  /* Map to Tailwind theme */
+  --color-near-black: var(--near-black);
+  --color-ink: var(--ink);
+  --color-porcelain: var(--porcelain);
+  --color-bone: var(--bone);
+  --color-electric-violet: var(--electric-violet);
+  --color-jade: var(--jade);
+  --color-persimmon: var(--persimmon);
+  --color-steel: var(--steel);
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-normal);
+}
+
+/* Focus Visible Styles */
+*:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 600;
+  line-height: var(--line-height-tight);
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: var(--font-size-64);
+}
+
+h2 {
+  font-size: var(--font-size-48);
+}
+
+h3 {
+  font-size: var(--font-size-36);
+}
+
+h4 {
+  font-size: var(--font-size-28);
+}
+
+h5 {
+  font-size: var(--font-size-22);
+}
+
+h6 {
+  font-size: var(--font-size-18);
+}
+
+p {
+  line-height: var(--line-height-relaxed);
+  max-width: 70ch;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity var(--duration-normal) var(--easing);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Ledger Lines Divider Motif */
+.ledger-divider {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 9px;
+}
+
+.ledger-divider span {
+  display: block;
+  height: 1px;
+  background-color: var(--text-primary);
+  opacity: 0.15;
+}
+
+/* Utility Classes */
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-surface {
+  background-color: var(--bg-surface);
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-24);
+  padding-right: var(--spacing-24);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: var(--spacing-16);
+    padding-right: var(--spacing-16);
+  }
+}
