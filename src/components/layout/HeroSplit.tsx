@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
 
 interface HeroSplitProps {
   eyebrow?: string;
@@ -50,18 +50,20 @@ export function HeroSplit({
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-16 justify-center items-center mb-48">
             {ctaPrimary && (
-              <Button size="lg" onClick={() => window.location.href = ctaPrimary.href}>
+              <Link
+                href={ctaPrimary.href}
+                className="inline-flex items-center justify-center font-medium rounded-12 transition-all duration-normal ease-brand focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-electric-violet focus-visible:ring-offset-focus bg-electric-violet text-white hover:opacity-90 hover:shadow-md hover:-translate-y-px active:translate-y-0 px-32 py-16 text-18"
+              >
                 {ctaPrimary.label}
-              </Button>
+              </Link>
             )}
             {ctaSecondary && (
-              <Button
-                size="lg"
-                variant="secondary"
-                onClick={() => window.location.href = ctaSecondary.href}
+              <Link
+                href={ctaSecondary.href}
+                className="inline-flex items-center justify-center font-medium rounded-12 transition-all duration-normal ease-brand focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-electric-violet focus-visible:ring-offset-focus bg-bone text-ink border border-ink/20 hover:bg-bone/80 hover:border-ink/30 active:bg-bone/60 px-32 py-16 text-18"
               >
                 {ctaSecondary.label}
-              </Button>
+              </Link>
             )}
           </div>
 
